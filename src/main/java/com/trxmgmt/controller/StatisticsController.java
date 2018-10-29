@@ -31,9 +31,9 @@ public class StatisticsController {
 
     @PostMapping("/transactions")
     public ResponseEntity postTransaction(@RequestBody Transaction transaction) {
-		int temp = new Random().nextInt(300000);
+/*		int temp = new Random().nextInt(300000);
 		long temp1 = Instant.now().toEpochMilli();
-		transaction.setTimestamp(temp1-temp);
+		transaction.setTimestamp(temp1-temp);*/
         if (trxStatService.insertTransaction(transaction)) {
             return ResponseEntity.status(HttpStatus.CREATED).build();
         }

@@ -24,7 +24,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class TrxStatService {
 
     
-	public static int durationForStats=300;
+	public static int durationForStats=60;
 
 
     private final Statistics[] statistics = new Statistics[durationForStats];
